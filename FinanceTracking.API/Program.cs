@@ -1,5 +1,6 @@
 using FinanceTracking.API.Extensions;
-using FinanceTracking.Infrastructure.Data;
+using FinanceTracking.DAL.DataAccess;
+
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

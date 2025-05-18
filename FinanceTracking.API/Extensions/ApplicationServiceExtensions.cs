@@ -1,5 +1,5 @@
-﻿using FinanceTracking.Infrastructure.Data;
-using FinanceTracking.Infrastructure.Extensions;
+using FinanceTracking.DAL.DataAccess;
+
 using Microsoft.EntityFrameworkCore;
 
 namespace FinanceTracking.API.Extensions
@@ -11,7 +11,7 @@ namespace FinanceTracking.API.Extensions
             @this.AddDbContext<FinanceTrackingDbContext>((sp, options) => options
                 .UseNpgsql(
                     configuration.GetConnectionString("DefaultConnection") ?? throw new Exception("Doesn't have config for DefaultConnection"),
-                    b => b.MigrationsAssembly("FinanceTracking.Infrastructure")
+                    b => b.MigrationsAssembly("FinanceTracking.DAL")
                         .EnableRetryOnFailure(10)
                         .UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery)
                 )
@@ -19,8 +19,6 @@ namespace FinanceTracking.API.Extensions
                 .EnableDetailedErrors()
                 .EnableServiceProviderCaching()
             );
-
-            @this.AddRepositories();
             return @this;
         }
     }
