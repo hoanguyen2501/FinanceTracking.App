@@ -1,14 +1,20 @@
+using FinanceTracking.API.Core;
+using FinanceTracking.BLL.Extensions;
 using FinanceTracking.DAL.DataAccess;
-
 using Microsoft.EntityFrameworkCore;
 
 namespace FinanceTracking.API.Extensions
 {
     public static class ApplicationServiceExtensions
     {
-        public static IServiceCollection AddApplicationServices(this IServiceCollection @this, IHostEnvironment env, IConfiguration configuration)
+        public static IServiceCollection AddApplicationServices(this IServiceCollection service, IHostEnvironment env, IConfiguration configuration)
         {
-            @this.AddDbContext<FinanceTrackingDbContext>((sp, options) => options
+            service.AddRouting(options =>
+            {
+                options.LowercaseUrls = true;
+            });
+
+            service.AddDbContext<FinanceTrackingDbContext>((sp, options) => options
                 .UseNpgsql(
                     configuration.GetConnectionString("DefaultConnection") ?? throw new Exception("Doesn't have config for DefaultConnection"),
                     b => b.MigrationsAssembly("FinanceTracking.DAL")
@@ -19,7 +25,12 @@ namespace FinanceTracking.API.Extensions
                 .EnableDetailedErrors()
                 .EnableServiceProviderCaching()
             );
-            return @this;
+
+            service.AddAutoMapper(typeof(DefaultMapperProfile));
+
+            service.AddBLLDependencyInjections();
+
+            return service;
         }
     }
 }
