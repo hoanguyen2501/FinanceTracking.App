@@ -12,8 +12,15 @@ namespace FinanceTracking.API.Controllers
         {
         }
 
+        [HttpGet]
+        public async Task<IActionResult> GetAllAsync(CancellationToken ct = default)
+        {
+            var categories = await Service.GetAllAsync(ct);
+            return Ok(categories);
+        }
+
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetAllAsync(string id, CancellationToken ct = default)
+        public async Task<IActionResult> GetByIdAsync(string id, CancellationToken ct = default)
         {
             var categories = await Service.GetByIdAsync(id, ct);
             return Ok(categories);
@@ -25,6 +32,21 @@ namespace FinanceTracking.API.Controllers
             var model = Mapper.Map<CategoryModel>(category);
             await Service.CreateAsync(model, ct);
             return Ok(model);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateAsync(string id, [FromBody] CategoryDTO category, CancellationToken ct = default)
+        {
+            var model = Mapper.Map<CategoryModel>(category);
+            await Service.UpdateAsync(model, ct);
+            return Ok(model);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteAsync(string id, CancellationToken ct = default)
+        {
+            await Service.DeleteAsync(id, ct);
+            return NoContent();
         }
     }
 }

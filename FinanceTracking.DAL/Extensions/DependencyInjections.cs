@@ -15,7 +15,12 @@ namespace FinanceTracking.DAL.Extensions
 
         private static IServiceCollection AddRepositories(this IServiceCollection service)
         {
+            service.AddScoped<IAccountRepository, AccountRepository>();
+            service.AddScoped<IAccountTypeRepository, AccountTypeRepository>();
             service.AddScoped<ICategoryRepository, CategoryRepository>();
+            service.AddScoped<IMemberRepository, MemberRepository>();
+            service.AddScoped<ITransactionRepository, TransactionRepository>();
+            service.AddScoped<IUserRepository, UserRepository>();
 
             return service;
         }

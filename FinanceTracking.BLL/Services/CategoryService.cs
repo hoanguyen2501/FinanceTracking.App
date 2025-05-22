@@ -20,13 +20,17 @@ namespace FinanceTracking.BLL.Services
             return model;
         }
 
-        public async Task DeleteAsync(CategoryModel model, CancellationToken ct = default)
+        public async Task DeleteAsync(string id, CancellationToken ct = default)
         {
+            var model = await _repository.GetByIdAsync(id, ct) ?? throw new Exception($"Category with Id='{id}' does not exist.");
             await _repository.DeleteAsync(model, ct);
         }
 
         public async Task<CategoryModel?> GetByIdAsync(string id, CancellationToken ct = default) =>
             await _repository.GetByIdAsync(id, ct);
+
+        public async Task<IEnumerable<CategoryModel>> GetAllAsync(CancellationToken ct = default) =>
+            await _repository.GetAllAsync(ct);
 
         public async Task<IEnumerable<CategoryModel>> GetManyIdsAsync(IEnumerable<string> ids, CancellationToken ct = default) =>
             await _repository.GetManyByIdsAsync(ids, ct);

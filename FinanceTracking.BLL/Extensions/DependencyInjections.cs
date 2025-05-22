@@ -18,7 +18,12 @@ namespace FinanceTracking.BLL.Extensions
 
         private static IServiceCollection AddServices(this IServiceCollection service)
         {
+            service.AddScoped<IAccountService, AccountService>();
+            service.AddScoped<IAccountTypeService, AccountTypeService>();
             service.AddScoped<ICategoryService, CategoryService>();
+            service.AddScoped<IMemberService, MemberService>();
+            service.AddScoped<ITransactionService, TransactionService>();
+            service.AddScoped<IUserService, UserService>();
 
             return service;
         }
