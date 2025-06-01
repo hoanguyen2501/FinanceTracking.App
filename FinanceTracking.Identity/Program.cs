@@ -1,5 +1,6 @@
 using FinanceTracking.Identity.Data;
 using FinanceTracking.Identity.Extensions;
+using FinanceTracking.Identity.Seed;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -24,6 +25,12 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+}
+
+using (var scope = app.Services.CreateScope())
+{
+    var serviceProvider = scope.ServiceProvider;
+    Seed.SeedMasterData(serviceProvider);
 }
 
 app.MapControllers();

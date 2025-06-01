@@ -2,9 +2,10 @@ using System.Text;
 using FinanceTracking.Identity.Data;
 using FinanceTracking.Identity.Entities;
 using FinanceTracking.Identity.Helpers;
+using FinanceTracking.Identity.Mappers;
+using FinanceTracking.Identity.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.CodeAnalysis.Differencing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
@@ -35,6 +36,8 @@ namespace FinanceTracking.Identity.Extensions
                 .EnableSensitiveDataLogging()
                 .EnableDetailedErrors()
                 .EnableServiceProviderCaching());
+
+            services.AddAutoMapper(typeof(DefaultMapperProfile));
 
             services.AddIdentity<AppUser, IdentityRole>(options =>
             {
@@ -74,6 +77,8 @@ namespace FinanceTracking.Identity.Extensions
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.SigningKey)),
                 };
             });
+
+            services.AddScoped<ITokenService, TokenService>();
 
             services.AddAuthorization();
 

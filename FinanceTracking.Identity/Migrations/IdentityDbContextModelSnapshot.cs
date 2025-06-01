@@ -110,20 +110,6 @@ namespace FinanceTracking.Identity.Migrations
                         .HasDatabaseName("RoleNameIndex");
 
                     b.ToTable("AspNetRoles", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = "1365ef08-abff-4086-a724-869a0c90d9c3",
-                            Name = "Admid",
-                            NormalizedName = "ADMIN"
-                        },
-                        new
-                        {
-                            Id = "7bc62022-b65b-4237-92e4-93defe5dc5e2",
-                            Name = "User",
-                            NormalizedName = "User"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

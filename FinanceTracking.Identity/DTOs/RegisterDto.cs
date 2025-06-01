@@ -5,7 +5,7 @@ namespace FinanceTracking.Identity.DTOs
     public sealed class RegisterDto
     {
         [Required]
-        public string Username { get; set; } = default!;
+        public string UserName { get; set; } = default!;
 
         [Required]
         [EmailAddress]
