@@ -5,38 +5,39 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace FinanceTracking.API.Controllers;
 
-public sealed class CategoriesController : BaseController<ICategoryService>
+[Route("api/account-types")]
+public class AccountTypesController : BaseController<IAccountTypeService>
 {
-    public CategoriesController(ILogger<CategoriesController> logger) : base(logger)
+    public AccountTypesController(ILogger<AccountTypesController> logger) : base(logger)
     {
     }
 
     [HttpGet]
     public async Task<IActionResult> GetAllAsync(CancellationToken ct = default)
     {
-        IEnumerable<CategoryModel> categories = await Service.GetAllAsync(ct);
-        return Ok(categories.Select(Mapper.Map<CategoryDTO>));
+        IEnumerable<AccountTypeModel> accounts = await Service.GetAllAsync(ct);
+        return Ok(accounts.Select(Mapper.Map<AccountTypeDTO>));
     }
 
     [HttpGet("{id}")]
     public async Task<IActionResult> GetByIdAsync(string id, CancellationToken ct = default)
     {
-        CategoryModel? category = await Service.GetByIdAsync(id, ct);
-        return Ok(category);
+        AccountTypeModel? account = await Service.GetByIdAsync(id, ct);
+        return Ok(account);
     }
 
     [HttpPost]
-    public async Task<IActionResult> CreateAsync([FromBody] CreateCategoryDTO category, CancellationToken ct = default)
+    public async Task<IActionResult> CreateAsync([FromBody] CreateAccountTypeDTO account, CancellationToken ct = default)
     {
-        CategoryModel model = Mapper.Map<CategoryModel>(category);
+        AccountTypeModel model = Mapper.Map<AccountTypeModel>(account);
         await Service.CreateAsync(model, ct);
         return Ok(model);
     }
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> UpdateAsync(string id, [FromBody] UpdateCategoryDTO category, CancellationToken ct = default)
+    public async Task<IActionResult> UpdateAsync(string id, [FromBody] UpdateAccountTypeDTO account, CancellationToken ct = default)
     {
-        CategoryModel model = Mapper.Map<CategoryModel>(category);
+        AccountTypeModel model = Mapper.Map<AccountTypeModel>(account);
         await Service.UpdateAsync(model, ct);
         return Ok(model);
     }

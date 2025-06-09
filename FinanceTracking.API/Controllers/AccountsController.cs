@@ -5,38 +5,38 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace FinanceTracking.API.Controllers;
 
-public sealed class CategoriesController : BaseController<ICategoryService>
+public class AccountsController : BaseController<IAccountService>
 {
-    public CategoriesController(ILogger<CategoriesController> logger) : base(logger)
+    public AccountsController(ILogger<AccountsController> logger) : base(logger)
     {
     }
 
     [HttpGet]
     public async Task<IActionResult> GetAllAsync(CancellationToken ct = default)
     {
-        IEnumerable<CategoryModel> categories = await Service.GetAllAsync(ct);
-        return Ok(categories.Select(Mapper.Map<CategoryDTO>));
+        IEnumerable<AccountModel> accounts = await Service.GetAllAsync(ct);
+        return Ok(accounts.Select(Mapper.Map<AccountDTO>));
     }
 
     [HttpGet("{id}")]
     public async Task<IActionResult> GetByIdAsync(string id, CancellationToken ct = default)
     {
-        CategoryModel? category = await Service.GetByIdAsync(id, ct);
-        return Ok(category);
+        AccountModel? account = await Service.GetByIdAsync(id, ct);
+        return Ok(account);
     }
 
     [HttpPost]
-    public async Task<IActionResult> CreateAsync([FromBody] CreateCategoryDTO category, CancellationToken ct = default)
+    public async Task<IActionResult> CreateAsync([FromBody] CreateAccountDTO account, CancellationToken ct = default)
     {
-        CategoryModel model = Mapper.Map<CategoryModel>(category);
+        AccountModel model = Mapper.Map<AccountModel>(account);
         await Service.CreateAsync(model, ct);
         return Ok(model);
     }
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> UpdateAsync(string id, [FromBody] UpdateCategoryDTO category, CancellationToken ct = default)
+    public async Task<IActionResult> UpdateAsync(string id, [FromBody] UpdateAccountDTO account, CancellationToken ct = default)
     {
-        CategoryModel model = Mapper.Map<CategoryModel>(category);
+        AccountModel model = Mapper.Map<AccountModel>(account);
         await Service.UpdateAsync(model, ct);
         return Ok(model);
     }

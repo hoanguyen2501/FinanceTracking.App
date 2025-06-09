@@ -16,4 +16,12 @@ namespace FinanceTracking.API.DTOs
         public string? Description { get; set; }
         public string Type { get; set; } = "I";
     }
+
+    public sealed class UpdateCategoryDTO
+    {
+        public string Name { get; set; } = default!;
+        public string Icon { get; set; } = "123";
+        public string? Description { get; set; }
+        public string Type { get; set; } = "I";
+    }
 }

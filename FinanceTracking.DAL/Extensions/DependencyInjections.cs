@@ -6,23 +6,23 @@ namespace FinanceTracking.DAL.Extensions
 {
     public static class DependencyInjections
     {
-        public static IServiceCollection AddDALDependencyInjections(this IServiceCollection service)
+        public static IServiceCollection AddDALDependencyInjections(this IServiceCollection services)
         {
-            service.AddRepositories();
+            services.AddRepositories();
 
-            return service;
+            return services;
         }
 
-        private static IServiceCollection AddRepositories(this IServiceCollection service)
+        private static IServiceCollection AddRepositories(this IServiceCollection services)
         {
-            service.AddScoped<IAccountRepository, AccountRepository>();
-            service.AddScoped<IAccountTypeRepository, AccountTypeRepository>();
-            service.AddScoped<ICategoryRepository, CategoryRepository>();
-            service.AddScoped<IMemberRepository, MemberRepository>();
-            service.AddScoped<ITransactionRepository, TransactionRepository>();
-            service.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IAccountRepository, AccountRepository>();
+            services.AddScoped<IAccountTypeRepository, AccountTypeRepository>();
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<IMemberRepository, MemberRepository>();
+            services.AddScoped<ITransactionRepository, TransactionRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
 
-            return service;
+            return services;
         }
     }
 }

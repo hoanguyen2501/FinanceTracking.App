@@ -1,0 +1,48 @@
+[
+    {
+        "name": "Cash",
+        "description": "Cash",
+        "accounts": [
+            {
+                "name": "Cash",
+                "description": "Cash"
+            }
+        ]
+    },
+    {
+        "name": "Bank",
+        "description": "Bank",
+        "accounts": [
+            {
+                "name": "Bank",
+                "description": "Bank"
+            }
+        ]
+    },
+    {
+        "name": "Saving",
+        "description": "Saving",
+        "accounts": [
+            {
+                "name": "Saving",
+                "description": "Saving"
+            }
+        ]
+    },
+    {
+        "name": "Credit Card",
+        "description": "Credit Card"
+    },
+    {
+        "name": "Debit Card",
+        "description": "Debit Card"
+    },
+    {
+        "name": "Lend Card",
+        "description": "Lend Card"
+    },
+    {
+        "name": "Borrow Card",
+        "description": "Borrow Card"
+    }
+]

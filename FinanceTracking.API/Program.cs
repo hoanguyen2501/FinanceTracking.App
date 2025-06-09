@@ -1,3 +1,4 @@
+using FinanceTracking.API.Data;
 using FinanceTracking.API.Extensions;
 using FinanceTracking.DAL.DataAccess;
 
@@ -20,6 +21,8 @@ using (var scope = app.Services.CreateScope())
 {
     var dbContext = scope.ServiceProvider.GetRequiredService<FinanceTrackingDbContext>();
     dbContext.Database.Migrate();
+
+    DataSeeding.SeedMasterData(scope.ServiceProvider);
 }
 
 
@@ -32,6 +35,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
