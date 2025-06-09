@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Self",
+        "description": "Self",
+        "isActive": true
+    },
+    {
+        "name": "Wife",
+        "description": "Wife",
+        "isActive": true
+    },
+    {
+        "name": "Husband",
+        "description": "Husband",
+        "isActive": true
+    },
+    {
+        "name": "Children",
+        "description": "Children",
+        "isActive": true
+    },
+    {
+        "name": "Parents",
+        "description": "Parents",
+        "isActive": true
+    },
+    {
+        "name": "All",
+        "description": "All",
+        "isActive": true
+    },
+    {
+        "name": "Other",
+        "description": "Other",
+        "isActive": true
+    }
+]

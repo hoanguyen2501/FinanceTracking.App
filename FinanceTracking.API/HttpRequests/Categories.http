@@ -1,0 +1,7 @@
+@API_URL = http://localhost:5196/api/categories
+@ACCESS_TOKEN = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhvYW5nbmJAZXhhbXBsZS5jb20iLCJnaXZlbl9uYW1lIjoiaG9hbmduYiIsIm5iZiI6MTc0OTI2NjgyOSwiZXhwIjoxNzQ5MjcwNDI5LCJpYXQiOjE3NDkyNjY4MjksImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjcyMzkiLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo3MDQ1In0.EfJrGH7z1j-cNYQ36Ju41sKr_XLORAXcfdn1lO87hMo
+
+### Get Categories
+GET {{API_URL}}
+Content-Type: application/json
+Authorization: Bearer {{ACCESS_TOKEN}}

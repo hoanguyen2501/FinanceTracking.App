@@ -1,0 +1,134 @@
+[
+    {
+        "name": "Food",
+        "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
+        "description": "Food",
+        "type": "I"
+    },
+    {
+        "name": "Transportation",
+        "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
+        "description": "Transportation",
+        "type": "I"
+    },
+    {
+        "name": "Clothes",
+        "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
+        "description": "Clothes",
+        "type": "I"
+    },
+    {
+        "name": "Food",
+        "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
+        "description": "Food",
+        "type": "I"
+    },
+    {
+        "name": "Socializing",
+        "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
+        "description": "Socializing",
+        "type": "I"
+    },
+    {
+        "name": "Health",
+        "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
+        "description": "Health",
+        "type": "I"
+    },
+    {
+        "name": "Parking",
+        "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
+        "description": "Parking",
+        "type": "I"
+    },
+    {
+        "name": "Petro",
+        "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
+        "description": "Petro",
+        "type": "I"
+    },
+    {
+        "name": "Beverage",
+        "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
+        "description": "Beverage",
+        "type": "I"
+    },
+    {
+        "name": "Badminton",
+        "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
+        "description": "Badminton",
+        "type": "I"
+    },
+    {
+        "name": "Gear",
+        "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
+        "description": "Gear",
+        "type": "I"
+    },
+    {
+        "name": "Football",
+        "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
+        "description": "Football",
+        "type": "I"
+    },
+    {
+        "name": "duno",
+        "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
+        "description": "duno",
+        "type": "I"
+    },
+    {
+        "name": "Motobike",
+        "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
+        "description": "Motobike",
+        "type": "I"
+    },
+    {
+        "name": "Charity",
+        "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
+        "description": "Charity",
+        "type": "I"
+    },
+    {
+        "name": "Beauty",
+        "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
+        "description": "Beauty",
+        "type": "I"
+    },
+    {
+        "name": "Salary",
+        "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
+        "description": "Salary",
+        "type": "X"
+    },
+    {
+        "name": "Bonus",
+        "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
+        "description": "Bonus",
+        "type": "X"
+    },
+    {
+        "name": "Interest",
+        "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
+        "description": "Interest",
+        "type": "X"
+    },
+    {
+        "name": "Badminton",
+        "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
+        "description": "Badminton",
+        "type": "X"
+    },
+    {
+        "name": "Debt",
+        "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
+        "description": "Debt",
+        "type": "X"
+    },
+    {
+        "name": "Borrow",
+        "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
+        "description": "Borrow",
+        "type": "X"
+    }
+]

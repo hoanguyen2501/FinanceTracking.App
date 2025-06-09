@@ -4,6 +4,6 @@ namespace FinanceTracking.BLL.Interfaces
     {
         Task<T> CreateAsync(T model, CancellationToken ct = default);
         Task<T> UpdateAsync(T model, CancellationToken ct = default);
-        Task DeleteAsync(T model, CancellationToken ct = default);
+        Task DeleteAsync(string id, CancellationToken ct = default);
     }
 }

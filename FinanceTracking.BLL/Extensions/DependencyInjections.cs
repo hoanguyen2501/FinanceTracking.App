@@ -7,20 +7,25 @@ namespace FinanceTracking.BLL.Extensions
 {
     public static class DependencyInjections
     {
-        public static IServiceCollection AddBLLDependencyInjections(this IServiceCollection service)
+        public static IServiceCollection AddBLLDependencyInjections(this IServiceCollection services)
         {
-            service.AddDALDependencyInjections();
+            services.AddDALDependencyInjections();
 
-            service.AddServices();
+            services.AddServices();
 
-            return service;
+            return services;
         }
 
-        private static IServiceCollection AddServices(this IServiceCollection service)
+        private static IServiceCollection AddServices(this IServiceCollection services)
         {
-            service.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<IAccountService, AccountService>();
+            services.AddScoped<IAccountTypeService, AccountTypeService>();
+            services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<IMemberService, MemberService>();
+            services.AddScoped<ITransactionService, TransactionService>();
+            services.AddScoped<IUserService, UserService>();
 
-            return service;
+            return services;
         }
     }
 }

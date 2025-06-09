@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceTracking.API", "FinanceTracking.API\FinanceTracking.API.csproj", "{A76AA629-B70C-453A-9267-04207868AB41}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceTracking.DAL", "FinanceTracking.DAL\FinanceTracking.DAL.csproj", "{9486E32F-9AFD-4665-88E0-0B651353D669}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceTracking.BLL", "FinanceTracking.BLL\FinanceTracking.BLL.csproj", "{5CB37F13-3FCD-4511-965A-22028E345476}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceTracking.API", "FinanceTracking.API\FinanceTracking.API.csproj", "{6BA81577-1E62-4A0E-8E25-F91E8875EC43}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A76AA629-B70C-453A-9267-04207868AB41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A76AA629-B70C-453A-9267-04207868AB41}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A76AA629-B70C-453A-9267-04207868AB41}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A76AA629-B70C-453A-9267-04207868AB41}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9486E32F-9AFD-4665-88E0-0B651353D669}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9486E32F-9AFD-4665-88E0-0B651353D669}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9486E32F-9AFD-4665-88E0-0B651353D669}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -27,6 +23,10 @@ Global
 		{5CB37F13-3FCD-4511-965A-22028E345476}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5CB37F13-3FCD-4511-965A-22028E345476}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5CB37F13-3FCD-4511-965A-22028E345476}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BA81577-1E62-4A0E-8E25-F91E8875EC43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BA81577-1E62-4A0E-8E25-F91E8875EC43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BA81577-1E62-4A0E-8E25-F91E8875EC43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BA81577-1E62-4A0E-8E25-F91E8875EC43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -36,6 +36,8 @@ namespace FinanceTracking.DAL.Repositories
             }
         }
 
-        protected abstract IQueryable<T> GetQueryable(bool isNoTracking = false);
+        protected abstract IQueryable<T> GetQueryable(bool isNoTracking = false, bool hasInclude = true);
+        protected abstract Task<T?> GetEntityByIdAsync(string id, bool isNoTracking = true, CancellationToken ct = default);
+        protected abstract Task<IEnumerable<T>> GetEntitiesByIdsAsync(IEnumerable<string> ids, bool isNoTracking = true, CancellationToken ct = default);
     }
 }

@@ -11,6 +11,6 @@ namespace FinanceTracking.DAL.Models
         public string Name { get; set; } = default!;
         public string Icon { get; set; } = default!;
         public string? Description { get; set; }
-        public string Type { get; set; } = default!;
+        public CategoryType Type { get; set; } = default!;
     }
 }
