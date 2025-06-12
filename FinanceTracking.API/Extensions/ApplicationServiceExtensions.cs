@@ -35,10 +35,7 @@ public static class ApplicationServiceExtensions
             .AddInterceptors(sp.GetRequiredService<AuditInterceptor>())
         );
 
-        services.AddAutoMapper(cfg =>
-        {
-            services.AddMapperProfiles(cfg);
-        }, typeof(Program).Assembly);
+        services.AddAutoMapper(cfg => services.AddMapperProfiles(cfg), AppDomain.CurrentDomain.GetAssemblies());
         services.AddBLLDependencyInjections();
         services.AddAuthentication(configuration);
 
@@ -86,6 +83,7 @@ public static class ApplicationServiceExtensions
         cfg.AddProfile<AccountTypeMapperProfile>();
         cfg.AddProfile<CategoryMapperProfile>();
         cfg.AddProfile<MemberMapperProfile>();
+        cfg.AddProfile<TransactionMapperProfile>();
         cfg.AddProfile<UserMapperProfile>();
 
         return services;

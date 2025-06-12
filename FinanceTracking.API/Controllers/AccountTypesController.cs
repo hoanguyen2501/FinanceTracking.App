@@ -15,31 +15,31 @@ public class AccountTypesController : BaseController<IAccountTypeService>
     [HttpGet]
     public async Task<IActionResult> GetAllAsync(CancellationToken ct = default)
     {
-        IEnumerable<AccountTypeModel> accounts = await Service.GetAllAsync(ct);
-        return Ok(accounts.Select(Mapper.Map<AccountTypeDTO>));
+        IEnumerable<AccountTypeModel> accountTypes = await Service.GetAllAsync(ct);
+        return Ok(accountTypes.Select(Mapper.Map<AccountTypeDTO>));
     }
 
     [HttpGet("{id}")]
     public async Task<IActionResult> GetByIdAsync(string id, CancellationToken ct = default)
     {
-        AccountTypeModel? account = await Service.GetByIdAsync(id, ct);
-        return Ok(account);
+        AccountTypeModel? accountType = await Service.GetByIdAsync(id, ct);
+        return Ok(Mapper.Map<AccountTypeDTO>(accountType));
     }
 
     [HttpPost]
-    public async Task<IActionResult> CreateAsync([FromBody] CreateAccountTypeDTO account, CancellationToken ct = default)
+    public async Task<IActionResult> CreateAsync([FromBody] CreateAccountTypeDTO accountType, CancellationToken ct = default)
     {
-        AccountTypeModel model = Mapper.Map<AccountTypeModel>(account);
+        AccountTypeModel model = Mapper.Map<AccountTypeModel>(accountType);
         await Service.CreateAsync(model, ct);
-        return Ok(model);
+        return Ok(Mapper.Map<AccountTypeDTO>(model));
     }
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> UpdateAsync(string id, [FromBody] UpdateAccountTypeDTO account, CancellationToken ct = default)
+    public async Task<IActionResult> UpdateAsync(string id, [FromBody] UpdateAccountTypeDTO accountType, CancellationToken ct = default)
     {
-        AccountTypeModel model = Mapper.Map<AccountTypeModel>(account);
+        AccountTypeModel model = Mapper.Map<AccountTypeModel>(accountType);
         await Service.UpdateAsync(model, ct);
-        return Ok(model);
+        return Ok(Mapper.Map<AccountTypeDTO>(model));
     }
 
     [HttpDelete("{id}")]

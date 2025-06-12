@@ -32,7 +32,7 @@ public static class DataSeeding
             }
         }
 
-        // Membera
+        // Members
         {
             var jsonData = File.ReadAllText("Data/members.json");
             var members = JsonConvert.DeserializeObject<IEnumerable<MemberEntity>>(jsonData) ?? throw new Exception("Seed Category data is missing");

@@ -3,132 +3,132 @@
         "name": "Food",
         "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
         "description": "Food",
-        "type": "I"
+        "type": "X"
     },
     {
         "name": "Transportation",
         "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
         "description": "Transportation",
-        "type": "I"
+        "type": "X"
     },
     {
         "name": "Clothes",
         "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
         "description": "Clothes",
-        "type": "I"
+        "type": "X"
     },
     {
         "name": "Food",
         "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
         "description": "Food",
-        "type": "I"
+        "type": "X"
     },
     {
         "name": "Socializing",
         "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
         "description": "Socializing",
-        "type": "I"
+        "type": "X"
     },
     {
         "name": "Health",
         "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
         "description": "Health",
-        "type": "I"
+        "type": "X"
     },
     {
         "name": "Parking",
         "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
         "description": "Parking",
-        "type": "I"
+        "type": "X"
     },
     {
         "name": "Petro",
         "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
         "description": "Petro",
-        "type": "I"
+        "type": "X"
     },
     {
         "name": "Beverage",
         "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
         "description": "Beverage",
-        "type": "I"
+        "type": "X"
     },
     {
         "name": "Badminton",
         "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
         "description": "Badminton",
-        "type": "I"
+        "type": "X"
     },
     {
         "name": "Gear",
         "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
         "description": "Gear",
-        "type": "I"
+        "type": "X"
     },
     {
         "name": "Football",
         "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
         "description": "Football",
-        "type": "I"
+        "type": "X"
     },
     {
         "name": "duno",
         "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
         "description": "duno",
-        "type": "I"
+        "type": "X"
     },
     {
         "name": "Motobike",
         "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
         "description": "Motobike",
-        "type": "I"
+        "type": "X"
     },
     {
         "name": "Charity",
         "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
         "description": "Charity",
-        "type": "I"
+        "type": "X"
     },
     {
         "name": "Beauty",
         "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
         "description": "Beauty",
-        "type": "I"
+        "type": "X"
     },
     {
         "name": "Salary",
         "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
         "description": "Salary",
-        "type": "X"
+        "type": "I"
     },
     {
         "name": "Bonus",
         "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
         "description": "Bonus",
-        "type": "X"
+        "type": "I"
     },
     {
         "name": "Interest",
         "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
         "description": "Interest",
-        "type": "X"
+        "type": "I"
     },
     {
         "name": "Badminton",
         "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
         "description": "Badminton",
-        "type": "X"
+        "type": "I"
     },
     {
         "name": "Debt",
         "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
         "description": "Debt",
-        "type": "X"
+        "type": "I"
     },
     {
         "name": "Borrow",
         "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
         "description": "Borrow",
-        "type": "X"
+        "type": "I"
     }
 ]

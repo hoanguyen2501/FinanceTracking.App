@@ -7,5 +7,5 @@ public sealed class UserDTO
     public string? LastName { get; set; }
     public string Email { get; set; } = default!;
     public string Username { get; set; } = default!;
-    public bool IsActive { get; set; } = default!;
+    public string Status { get; set; } = default!;
 }

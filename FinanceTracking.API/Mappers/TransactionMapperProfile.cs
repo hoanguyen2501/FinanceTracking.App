@@ -1,14 +1,13 @@
 using AutoMapper;
 using FinanceTracking.API.DTOs;
-using FinanceTracking.API.Mappers.Resolvers;
 using FinanceTracking.DAL.Entities;
 using FinanceTracking.DAL.Models;
 
 namespace FinanceTracking.API.Mappers;
 
-public sealed class UserMapperProfile : Profile
+public sealed class TransactionMapperProfile : Profile
 {
-    public UserMapperProfile()
+    public TransactionMapperProfile()
     {
         CreateModelMapper();
         CreateDTOMapper();
@@ -16,14 +15,16 @@ public sealed class UserMapperProfile : Profile
 
     private void CreateModelMapper()
     {
-        CreateMap<UserEntity, UserModel>()
-            .ForMember(d => d.Status, opt => opt.MapFrom<UserStatusResolver>())
+        CreateMap<TransactionEntity, TransactionModel>()
             .ReverseMap();
     }
 
     private void CreateDTOMapper()
     {
-        CreateMap<UserModel, UserDTO>()
+        CreateMap<TransactionModel, TransactionDTO>()
             .ReverseMap();
+
+        CreateMap<CreateTransactionDTO, TransactionModel>();
+        CreateMap<UpdateTransactionDTO, TransactionModel>();
     }
 }

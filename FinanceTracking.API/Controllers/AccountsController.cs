@@ -22,7 +22,7 @@ public class AccountsController : BaseController<IAccountService>
     public async Task<IActionResult> GetByIdAsync(string id, CancellationToken ct = default)
     {
         AccountModel? account = await Service.GetByIdAsync(id, ct);
-        return Ok(account);
+        return Ok(Mapper.Map<AccountDTO>(account));
     }
 
     [HttpPost]
@@ -30,7 +30,7 @@ public class AccountsController : BaseController<IAccountService>
     {
         AccountModel model = Mapper.Map<AccountModel>(account);
         await Service.CreateAsync(model, ct);
-        return Ok(model);
+        return Ok(Mapper.Map<AccountDTO>(account));
     }
 
     [HttpPut("{id}")]
@@ -38,7 +38,7 @@ public class AccountsController : BaseController<IAccountService>
     {
         AccountModel model = Mapper.Map<AccountModel>(account);
         await Service.UpdateAsync(model, ct);
-        return Ok(model);
+        return Ok(Mapper.Map<AccountDTO>(account));
     }
 
     [HttpDelete("{id}")]

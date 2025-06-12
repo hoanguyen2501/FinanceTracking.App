@@ -1,0 +1,5 @@
+@URL = {{baseUrl}}/users
+### Get Categories
+GET {{URL}}
+Content-Type: application/json
+Authorization: Bearer {{accessToken}}

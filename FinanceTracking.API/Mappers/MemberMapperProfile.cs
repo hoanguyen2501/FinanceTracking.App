@@ -1,5 +1,6 @@
 using AutoMapper;
 using FinanceTracking.API.DTOs;
+using FinanceTracking.API.Mappers.Resolvers;
 using FinanceTracking.DAL.Entities;
 using FinanceTracking.DAL.Models;
 
@@ -16,6 +17,7 @@ public sealed class MemberMapperProfile : Profile
     private void CreateModelMapper()
     {
         CreateMap<MemberEntity, MemberModel>()
+            .ForMember(d => d.Status, opt => opt.MapFrom<MemberStatusResolver>())
             .ReverseMap();
     }
 
@@ -25,5 +27,6 @@ public sealed class MemberMapperProfile : Profile
             .ReverseMap();
 
         CreateMap<CreateMemberDTO, MemberModel>();
+        CreateMap<UpdateMemberDTO, MemberModel>();
     }
 }

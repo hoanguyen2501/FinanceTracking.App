@@ -17,13 +17,14 @@ public sealed class CategoryMapperProfile : Profile
     private void CreateModelMapper()
     {
         CreateMap<CategoryEntity, CategoryModel>()
-            .ForMember(d => d.Type, s => s.MapFrom<CategeryTypeResolver>())
+            .ForMember(d => d.Type, opt => opt.MapFrom<CategoryTypeResolver>())
             .ReverseMap();
     }
 
     private void CreateDTOMapper()
     {
         CreateMap<CategoryModel, CategoryDTO>()
+            .PreserveReferences()
             .ReverseMap();
 
         CreateMap<CreateCategoryDTO, CategoryModel>();

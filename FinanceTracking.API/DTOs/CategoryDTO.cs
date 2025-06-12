@@ -6,7 +6,7 @@ namespace FinanceTracking.API.DTOs
         public string Name { get; set; } = default!;
         public string Icon { get; set; } = default!;
         public string? Description { get; set; }
-        public string Type { get; set; } = default!;
+        // public string Type { get; set; } = default!;
     }
 
     public sealed class CreateCategoryDTO
@@ -14,7 +14,7 @@ namespace FinanceTracking.API.DTOs
         public string Name { get; set; } = default!;
         public string Icon { get; set; } = "123";
         public string? Description { get; set; }
-        public string Type { get; set; } = "I";
+        public string Type { get; set; } = "Income";
     }
 
     public sealed class UpdateCategoryDTO
@@ -22,6 +22,6 @@ namespace FinanceTracking.API.DTOs
         public string Name { get; set; } = default!;
         public string Icon { get; set; } = "123";
         public string? Description { get; set; }
-        public string Type { get; set; } = "I";
+        public string Type { get; set; } = "Income";
     }
 }

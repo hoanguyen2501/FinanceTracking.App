@@ -22,7 +22,7 @@ public sealed class CategoriesController : BaseController<ICategoryService>
     public async Task<IActionResult> GetByIdAsync(string id, CancellationToken ct = default)
     {
         CategoryModel? category = await Service.GetByIdAsync(id, ct);
-        return Ok(category);
+        return Ok(Mapper.Map<CategoryDTO>(category));
     }
 
     [HttpPost]
@@ -30,7 +30,7 @@ public sealed class CategoriesController : BaseController<ICategoryService>
     {
         CategoryModel model = Mapper.Map<CategoryModel>(category);
         await Service.CreateAsync(model, ct);
-        return Ok(model);
+        return Ok(Mapper.Map<CategoryDTO>(model));
     }
 
     [HttpPut("{id}")]
@@ -38,7 +38,7 @@ public sealed class CategoriesController : BaseController<ICategoryService>
     {
         CategoryModel model = Mapper.Map<CategoryModel>(category);
         await Service.UpdateAsync(model, ct);
-        return Ok(model);
+        return Ok(Mapper.Map<CategoryDTO>(model));
     }
 
     [HttpDelete("{id}")]
