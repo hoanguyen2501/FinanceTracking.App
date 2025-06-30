@@ -22,6 +22,7 @@ public static class ApplicationServiceExtensions
             options.LowercaseUrls = true;
         });
 
+        AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
         services.AddDbContext<FinanceTrackingDbContext>((sp, options) => options
             .UseNpgsql(
                 configuration.GetConnectionString("DefaultConnection") ?? throw new Exception("Doesn't have config for DefaultConnection"),

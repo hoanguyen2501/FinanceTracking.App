@@ -26,17 +26,22 @@ public sealed class TransactionsController : BaseController<ITransactionService>
     }
 
     [HttpPost]
-    public async Task<IActionResult> CreateAsync([FromBody] CreateTransactionDTO category, CancellationToken ct = default)
+    public async Task<IActionResult> CreateAsync([FromBody] CreateTransactionDTO transaction, CancellationToken ct = default)
     {
-        TransactionModel model = Mapper.Map<TransactionModel>(category);
+        TransactionModel model = Mapper.Map<TransactionModel>(transaction);
         await Service.CreateAsync(model, ct);
         return Ok(Mapper.Map<TransactionDTO>(model));
     }
 
-    [HttpPut("{id}")]
-    public async Task<IActionResult> UpdateAsync(string id, [FromBody] UpdateTransactionDTO category, CancellationToken ct = default)
+    [HttpPut]
+    public async Task<IActionResult> UpdateAsync([FromBody] UpdateTransactionDTO transaction, CancellationToken ct = default)
     {
-        TransactionModel model = Mapper.Map<TransactionModel>(category);
+        var model = await Service.GetByIdAsync(transaction.Id, ct);
+        if (model == null)
+        {
+            return NotFound();
+        }
+        model = Mapper.Map<TransactionModel>(transaction);
         await Service.UpdateAsync(model, ct);
         return Ok(Mapper.Map<TransactionDTO>(model));
     }

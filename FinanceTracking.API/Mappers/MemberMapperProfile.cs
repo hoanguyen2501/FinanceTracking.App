@@ -17,6 +17,8 @@ public sealed class MemberMapperProfile : Profile
     private void CreateModelMapper()
     {
         CreateMap<MemberEntity, MemberModel>()
+            .PreserveReferences()
+            .MaxDepth(1)
             .ForMember(d => d.Status, opt => opt.MapFrom<MemberStatusResolver>())
             .ReverseMap();
     }
@@ -24,6 +26,7 @@ public sealed class MemberMapperProfile : Profile
     private void CreateDTOMapper()
     {
         CreateMap<MemberModel, MemberDTO>()
+            .PreserveReferences()
             .ReverseMap();
 
         CreateMap<CreateMemberDTO, MemberModel>();

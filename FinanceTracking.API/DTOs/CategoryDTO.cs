@@ -6,7 +6,7 @@ namespace FinanceTracking.API.DTOs
         public string Name { get; set; } = default!;
         public string Icon { get; set; } = default!;
         public string? Description { get; set; }
-        // public string Type { get; set; } = default!;
+        public string Type { get; set; } = default!;
     }
 
     public sealed class CreateCategoryDTO

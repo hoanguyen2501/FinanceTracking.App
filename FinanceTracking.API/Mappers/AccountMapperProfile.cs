@@ -16,12 +16,15 @@ public sealed class AccountMapperProfile : Profile
     private void CreateModelMapper()
     {
         CreateMap<AccountEntity, AccountModel>()
+            .MaxDepth(1)
+            .PreserveReferences()
             .ReverseMap();
     }
 
     private void CreateDTOMapper()
     {
         CreateMap<AccountModel, AccountDTO>()
+            .PreserveReferences()
             .ReverseMap();
 
         CreateMap<CreateAccountDTO, AccountModel>();

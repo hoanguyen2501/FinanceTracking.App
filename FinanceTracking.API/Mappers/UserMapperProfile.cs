@@ -17,6 +17,8 @@ public sealed class UserMapperProfile : Profile
     private void CreateModelMapper()
     {
         CreateMap<UserEntity, UserModel>()
+            .PreserveReferences()
+            .MaxDepth(1)
             .ForMember(d => d.Status, opt => opt.MapFrom<UserStatusResolver>())
             .ReverseMap();
     }

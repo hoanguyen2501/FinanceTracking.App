@@ -17,6 +17,8 @@ public sealed class CategoryMapperProfile : Profile
     private void CreateModelMapper()
     {
         CreateMap<CategoryEntity, CategoryModel>()
+            .PreserveReferences()
+            .MaxDepth(1)
             .ForMember(d => d.Type, opt => opt.MapFrom<CategoryTypeResolver>())
             .ReverseMap();
     }

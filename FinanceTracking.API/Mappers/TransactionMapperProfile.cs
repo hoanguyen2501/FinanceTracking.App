@@ -16,15 +16,18 @@ public sealed class TransactionMapperProfile : Profile
     private void CreateModelMapper()
     {
         CreateMap<TransactionEntity, TransactionModel>()
+            .PreserveReferences()
+            .MaxDepth(1)
             .ReverseMap();
     }
 
     private void CreateDTOMapper()
     {
         CreateMap<TransactionModel, TransactionDTO>()
+            .PreserveReferences()
             .ReverseMap();
-
         CreateMap<CreateTransactionDTO, TransactionModel>();
         CreateMap<UpdateTransactionDTO, TransactionModel>();
+
     }
 }

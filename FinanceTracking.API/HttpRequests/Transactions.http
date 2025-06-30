@@ -1,0 +1,44 @@
+@URL = {{baseUrl}}/transactions
+### Get Categories
+GET {{URL}}
+Content-Type: application/json
+Authorization: Bearer {{accessToken}}
+
+### Get Categories
+POST {{URL}}
+Content-Type: application/json
+Authorization: Bearer {{accessToken}}
+
+{
+    "transactionDate": "2025-06-12T15:07:40.558505",
+    "description": "Parking",
+    "amout": 4000,
+    "category": {
+        "id": "5d172ba0-124b-4c37-9a8d-48e568d9cc4e",
+        "name": "Parking",
+        "icon": "https://img.icons8.com/?size=100&id=97436&format=png&color=000000",
+        "type": "Expense"
+    },
+    "account": {
+        "id": "a73b3445-7e10-415b-b09e-b606ce38197f",
+        "name": "Cash",
+        "accountTypeId": "bfecde48-b0ff-4ba1-935f-085eb84de6c4",
+        "accountType": {
+            "id": "bfecde48-b0ff-4ba1-935f-085eb84de6c4",
+            "name": "Cash"
+        }
+    },
+    "member": {
+        "id": "c99178ff-e19c-4501-a631-2b3fb95b315c",
+        "name": "Self",
+        "status": "Active"
+    },
+    "user": {
+        "id": "37ee93c7-3568-434c-90bf-9b407de8d770",
+        "firstName": "Hoang",
+        "lastName": "Nguyen Ba",
+        "email": "hoangnb@example.com",
+        "username": "hoangnb",
+        "status": "Active"
+    }
+}
